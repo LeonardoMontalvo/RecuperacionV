@@ -1,39 +1,23 @@
-package Modelo;
-
-import java.util.Date;
-
-/**
- *
- * @author Leo
- */
+package modelo;
 public class Libro {
-
-    private String autor;
     private String titulo;
+    private String autor;
     private String ISBN;
     private int paginas;
-    private int edicion;
+    private String edicion;
     private String editorial;
     private String lugar;
-    private Date fechaEdicion;
+    private String fecha;
 
-    public Libro(String autor, String titulo, String ISBN, int paginas, int edicion, String editorial, String lugar, Date fechaEdicion) {
-        this.autor = autor;
+    public Libro(String titulo, String autor, String ISBN, int paginas, String edicion, String editorial, String lugar, String fecha) {
         this.titulo = titulo;
+        this.autor = autor;
         this.ISBN = ISBN;
         this.paginas = paginas;
         this.edicion = edicion;
         this.editorial = editorial;
         this.lugar = lugar;
-        this.fechaEdicion = fechaEdicion;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
+        this.fecha = fecha;
     }
 
     public String getTitulo() {
@@ -42,6 +26,14 @@ public class Libro {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 
     public String getISBN() {
@@ -60,11 +52,11 @@ public class Libro {
         this.paginas = paginas;
     }
 
-    public int getEdicion() {
+    public String getEdicion() {
         return edicion;
     }
 
-    public void setEdicion(int edicion) {
+    public void setEdicion(String edicion) {
         this.edicion = edicion;
     }
 
@@ -84,12 +76,17 @@ public class Libro {
         this.lugar = lugar;
     }
 
-    public Date getFechaEdicion() {
-        return fechaEdicion;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setFechaEdicion(Date fechaEdicion) {
-        this.fechaEdicion = fechaEdicion;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
+    @Override
+    public String toString() {
+        return "Libro{" + "titulo=" + titulo + ", autor=" + autor + ", ISBN=" + ISBN + ", paginas=" + paginas + ", edicion=" + edicion + ", editorial=" + editorial + ", lugar=" + lugar + ", fecha=" + fecha + '}';
+    }
+    
 }
