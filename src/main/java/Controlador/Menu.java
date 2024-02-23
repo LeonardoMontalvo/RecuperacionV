@@ -34,17 +34,17 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         bntAgregarL = new javax.swing.JButton();
-        btnAgregarL1 = new javax.swing.JButton();
-        btnAgregarL2 = new javax.swing.JButton();
-        btnAgregarL3 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         btnEliminarL = new javax.swing.JButton();
         btnModificarL = new javax.swing.JButton();
         btnBuscarL = new javax.swing.JButton();
-        btnAgregarL4 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jInternalFrame1 = new javax.swing.JInternalFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jInternalFrame2 = new javax.swing.JInternalFrame();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         btnAgregarP = new javax.swing.JButton();
         btnAgregarL5 = new javax.swing.JButton();
         btnAgregarL6 = new javax.swing.JButton();
@@ -59,58 +59,85 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         bntAgregarL.setText("Agregar");
-        getContentPane().add(bntAgregarL, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, -1, -1));
-
-        btnAgregarL1.setText("Agregar");
-        getContentPane().add(btnAgregarL1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, -1, -1));
-
-        btnAgregarL2.setText("Agregar");
-        getContentPane().add(btnAgregarL2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, -1, -1));
-
-        btnAgregarL3.setText("Agregar");
-        getContentPane().add(btnAgregarL3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, -1, -1));
+        getContentPane().add(bntAgregarL, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, -1, -1));
 
         jButton3.setText("Libros");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 100, -1));
 
         btnEliminarL.setText("Eliminar");
         getContentPane().add(btnEliminarL, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
 
         btnModificarL.setText("Modificar");
-        getContentPane().add(btnModificarL, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, -1, -1));
+        getContentPane().add(btnModificarL, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
 
         btnBuscarL.setText("Buscar");
         getContentPane().add(btnBuscarL, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, -1, -1));
 
-        btnAgregarL4.setText("Agregar");
-        getContentPane().add(btnAgregarL4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, -1, -1));
-
         jInternalFrame1.setVisible(true);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
         jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
         jInternalFrame1Layout.setHorizontalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 563, Short.MAX_VALUE)
+            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE))
         );
         jInternalFrame1Layout.setVerticalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 20, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab1", jInternalFrame1);
 
         jInternalFrame2.setVisible(true);
 
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
         javax.swing.GroupLayout jInternalFrame2Layout = new javax.swing.GroupLayout(jInternalFrame2.getContentPane());
         jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
         jInternalFrame2Layout.setHorizontalGroup(
             jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jInternalFrame2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE))
         );
         jInternalFrame2Layout.setVerticalGroup(
             jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jInternalFrame2Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 24, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab2", jInternalFrame2);
@@ -130,6 +157,11 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(btnAgregarL7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, -1, -1));
 
         jButton5.setText("LibrosPrestados");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 100, -1));
 
         btnEliminarP.setText("Eliminar");
@@ -146,6 +178,14 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        jTabbedPane1.setSelectedIndex(0);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        jTabbedPane1.setSelectedIndex(1);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     
      private ArrayList< Libro> listaMantenimientos = new ArrayList<>();
@@ -171,7 +211,7 @@ public void mostrarDatosLibros(Libro libro) {
     Object[] fila = new Object[9];
 
     fila[0] = modelo.getRowCount() + 1;
-    fila[1] = libro.
+    fila[1] = libro.getTitulo();
     fila[2] = libro.getAutor();
     fila[3] = libro.getISBN();
     fila[4] = libro.getPaginas();
@@ -182,18 +222,8 @@ public void mostrarDatosLibros(Libro libro) {
     modelo.addRow(fila);
 }
 
-
-
-
-
-
-
-
-
-
-
-     private ArrayList< Libro> listaLibros = new ArrayList<>();
-    private DefaultTableModel modeloLibroA = new DefaultTableModel();
+   private ArrayList<Libro> listaLibros = new ArrayList<>();
+private DefaultTableModel modeloLibroA = new DefaultTableModel();
 
 public void setModeloLibrosA() {
     String[] cabecera = {"Nro", "Titulo", "Autor", "Cedula"};
@@ -208,19 +238,17 @@ public void setModeloLibrosA() {
         }
     }
 
-    jTabbedPane1.setModel(modeloLibroA);
+    jTable2.setModel(modeloLibroA);
 }
 
 public void mostrarDatosLibrosA(Libro libro) {
-    DefaultTableModel modelo = (DefaultTableModel) jTabbedPane1.getModel();
-    Object[] fila = new Object[6];
+    DefaultTableModel modelo = (DefaultTableModel) jTable2.getModel();
+    Object[] fila = new Object[4];
 
     fila[0] = modelo.getRowCount() + 1;
     fila[1] = libro.getTitulo();
     fila[2] = libro.getAutor();
-    fila[3] = libro.getCambiosFiltro(); 
-    fila[4] = libro.getFechaEdicion(); 
-    fila[5] = libro.getEdicion(); 
+//    fila[3] = libro.getCedula(); 
     modelo.addRow(fila);
 }
 
@@ -262,10 +290,6 @@ public void mostrarDatosLibrosA(Libro libro) {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bntAgregarL;
-    private javax.swing.JButton btnAgregarL1;
-    private javax.swing.JButton btnAgregarL2;
-    private javax.swing.JButton btnAgregarL3;
-    private javax.swing.JButton btnAgregarL4;
     private javax.swing.JButton btnAgregarL5;
     private javax.swing.JButton btnAgregarL6;
     private javax.swing.JButton btnAgregarL7;
@@ -281,6 +305,10 @@ public void mostrarDatosLibrosA(Libro libro) {
     private javax.swing.JButton jButton5;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JInternalFrame jInternalFrame2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
 }

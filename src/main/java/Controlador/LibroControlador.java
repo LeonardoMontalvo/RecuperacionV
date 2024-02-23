@@ -67,9 +67,31 @@ public class LibroControlador {
     return listaDatos;
 }
 
+ 
+ public ArrayList<Object[]> DatosLibrosA() {
+    ArrayList<Object[]> listaDatos = new ArrayList<>();
+    String sql = "{CALL DatosLibroA()}"; 
 
- 
- 
+    try (CallableStatement statement = conectar.prepareCall(sql);
+         ResultSet resultSet = statement.executeQuery()) {
+        int cont = 1;
+        while (resultSet.next()) {
+            Object[] fila = new Object[4]; 
+            fila[0] = cont;
+            fila[1] = resultSet.getString("titulo");
+            fila[2] = resultSet.getString("autor");
+            fila[3] = resultSet.getString("cedula"); 
+            listaDatos.add(fila);
+
+            cont++;
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return listaDatos;
+}
+
    ///////////////////////////////////////////////////////////DATOS DE MANTENIMIENTO POR PLACA/////////////////////////////////////////////////////////////////////7
     
      public ArrayList<Object[]> datosMantenimiento() {
