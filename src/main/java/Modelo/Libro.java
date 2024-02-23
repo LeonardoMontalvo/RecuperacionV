@@ -4,11 +4,19 @@
  */
 package Modelo;
 
+import java.util.Date;
+
 /**
  *
  * @author Leo
  */
-public class Persona {
-    private String nombre;
-   
+public class Libro {
+    
+    private String titulo, edicion, editorial, lugar, autor;
+    private Date fecha;
+    private int paginas;
+    
+    
+    
+    
 }
